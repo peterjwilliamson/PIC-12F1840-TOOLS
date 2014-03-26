@@ -1,0 +1,61 @@
+.TH "E:/29-I2C_LCD/SOFTWARE/BOOSTC/PIC12F683/SRC/LCD.c" 3 "Tue Dec 10 2013" "I2C LCD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+E:/29-I2C_LCD/SOFTWARE/BOOSTC/PIC12F683/SRC/LCD.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'INC\\SWI2C\&.H'\fP
+.br
+\fC#include 'INC\\LCD\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBLCD_strobe\fP (char lbyte)"
+.br
+.ti -1c
+.RI "void \fBLCD_wbyte\fP (char lbyte, char act)"
+.br
+.ti -1c
+.RI "void \fBLCD_init\fP (void)"
+.br
+.ti -1c
+.RI "void \fBLCD_printf\fP (const char *text)"
+.br
+.ti -1c
+.RI "void \fBLCD_printb\fP (char *lbuff)"
+.br
+.ti -1c
+.RI "void \fBLCD_printn\fP (long lnum, char cnum, char dp, char x, char y)"
+.br
+.ti -1c
+.RI "void \fBLCD_gotoxy\fP (char x, char y)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void LCD_gotoxy (charx, chary)"
+
+.SS "void LCD_init (void)"
+
+.SS "void LCD_printb (char *lbuff)"
+
+.SS "void LCD_printf (const char *text)"
+
+.SS "void LCD_printn (longlnum, charcnum, chardp, charx, chary)"
+
+.SS "void LCD_strobe (charlbyte)"
+
+.SS "void LCD_wbyte (charlbyte, charact)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for I2C LCD from the source code\&.

@@ -1,0 +1,168 @@
+.TH "E:/29-I2C_LCD/SOFTWARE/BOOSTC/PIC12F683/INC/i2c_lcd.h" 3 "Tue Dec 10 2013" "I2C LCD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+E:/29-I2C_LCD/SOFTWARE/BOOSTC/PIC12F683/INC/i2c_lcd.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <system\&.h>\fP
+.br
+\fC#include 'i2c\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCMD\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBDATA\fP   0x30"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD\fP   0b01000100"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_LINES\fP   2"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_CHARS\fP   16"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_EDELAY\fP   40"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_CLEAR\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_HOME\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_CUR_ON\fP   0x0E"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_CUR_OFF\fP   0x0C"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_CUR_BLINK\fP   0x0F"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_DISP_ON\fP   0x0C"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_DISP_OFF\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_LINE1\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_LINE2\fP   0xC0"
+.br
+.ti -1c
+.RI "#define \fBset_dd_ram\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBcursor_shift_right\fP   0x14"
+.br
+.ti -1c
+.RI "#define \fBcursor_shift_left\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBdisplay_shift_right\fP   0x1C"
+.br
+.ti -1c
+.RI "#define \fBdisplay_shift_left\fP   0x18"
+.br
+.ti -1c
+.RI "#define \fBi2c_lcd_cmd\fP(cbyte)   (\fBi2c_lcd_wbyte\fP((cbyte),(\fBCMD\fP)))"
+.br
+.ti -1c
+.RI "#define \fBi2c_lcd_data\fP(cbyte)   (\fBi2c_lcd_wbyte\fP((cbyte),(\fBDATA\fP)))"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBi2c_lcd_strobe\fP (char lbyte)"
+.br
+.ti -1c
+.RI "void \fBi2c_lcd_wbyte\fP (char lbyte, char act)"
+.br
+.ti -1c
+.RI "void \fBi2c_lcd_init\fP (void)"
+.br
+.ti -1c
+.RI "void \fBi2c_lcd_printf\fP (const char *text)"
+.br
+.ti -1c
+.RI "void \fBi2c_lcd_printb\fP (char *lbuff)"
+.br
+.ti -1c
+.RI "void \fBi2c_lcd_printn\fP (long lnum, char cnum, char dp, char x, char y)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CMD   0x20"
+
+.SS "#define cursor_shift_left   0x10"
+
+.SS "#define cursor_shift_right   0x14"
+
+.SS "#define DATA   0x30"
+
+.SS "#define display_shift_left   0x18"
+
+.SS "#define display_shift_right   0x1C"
+
+.SS "#define I2C_LCD   0b01000100"
+
+.SS "#define I2C_LCD_CHARS   16"
+
+.SS "#define I2C_LCD_CLEAR   0x01"
+
+.SS "#define i2c_lcd_cmd(cbyte)   (\fBi2c_lcd_wbyte\fP((cbyte),(\fBCMD\fP)))"
+
+.SS "#define I2C_LCD_CUR_BLINK   0x0F"
+
+.SS "#define I2C_LCD_CUR_OFF   0x0C"
+
+.SS "#define I2C_LCD_CUR_ON   0x0E"
+
+.SS "#define i2c_lcd_data(cbyte)   (\fBi2c_lcd_wbyte\fP((cbyte),(\fBDATA\fP)))"
+
+.SS "#define I2C_LCD_DISP_OFF   0x08"
+
+.SS "#define I2C_LCD_DISP_ON   0x0C"
+
+.SS "#define I2C_LCD_EDELAY   40"
+
+.SS "#define I2C_LCD_HOME   0x02"
+
+.SS "#define I2C_LCD_LINE1   0x80"
+
+.SS "#define I2C_LCD_LINE2   0xC0"
+
+.SS "#define I2C_LCD_LINES   2"
+
+.SS "#define set_dd_ram   0x80"
+
+.SH "Function Documentation"
+.PP 
+.SS "void i2c_lcd_init (void)"
+
+.SS "void i2c_lcd_printb (char *lbuff)"
+
+.SS "void i2c_lcd_printf (const char *text)"
+
+.SS "void i2c_lcd_printn (longlnum, charcnum, chardp, charx, chary)"
+
+.SS "void i2c_lcd_strobe (charlbyte)"
+
+.SS "void i2c_lcd_wbyte (charlbyte, charact)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for I2C LCD from the source code\&.

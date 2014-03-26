@@ -1,0 +1,223 @@
+.TH "E:/29-I2C_LCD/SOFTWARE/BOOSTC/PIC12F683/INC/LCD.h" 3 "Tue Dec 10 2013" "I2C LCD" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+E:/29-I2C_LCD/SOFTWARE/BOOSTC/PIC12F683/INC/LCD.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <system\&.h>\fP
+.br
+\fC#include 'INC\\swi2c\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDIN\fP   1"
+.br
+.ti -1c
+.RI "#define \fBDOUT\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSIZE\fP   16"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_ADDR\fP   0b01000000"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_BL\fP   7"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_RS\fP   6"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_RW\fP   5"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_EN\fP   4"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_D7\fP   3"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_D6\fP   2"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_D5\fP   1"
+.br
+.ti -1c
+.RI "#define \fBI2C_LCD_D4\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCMD\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBDATA\fP   0x50"
+.br
+.ti -1c
+.RI "#define \fBLCD_LINES\fP   2"
+.br
+.ti -1c
+.RI "#define \fBLCD_CHARS\fP   16"
+.br
+.ti -1c
+.RI "#define \fBLCD_EDELAY\fP   10"
+.br
+.ti -1c
+.RI "#define \fBLCD_cmd\fP(cbyte)   (\fBLCD_wbyte\fP((cbyte),(\fBCMD\fP)))"
+.br
+.ti -1c
+.RI "#define \fBLCD_data\fP(cbyte)   (\fBLCD_wbyte\fP((cbyte),(\fBDATA\fP)))"
+.br
+.ti -1c
+.RI "#define \fBLCD_CLEAR\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBLCD_HOME\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBLCD_CUR_ON\fP   0x0E"
+.br
+.ti -1c
+.RI "#define \fBLCD_CUR_OFF\fP   0x0C"
+.br
+.ti -1c
+.RI "#define \fBLCD_CUR_BLINK\fP   0x0F"
+.br
+.ti -1c
+.RI "#define \fBLCD_DISP_ON\fP   0x0C"
+.br
+.ti -1c
+.RI "#define \fBLCD_DISP_OFF\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBLCD_LINE1\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBLCD_LINE2\fP   0xC0"
+.br
+.ti -1c
+.RI "#define \fBLCD_SET_DD_RAM\fP   0x80"
+.br
+.ti -1c
+.RI "#define \fBLCD_CURSOR_SHIFT_RIGHT\fP   0x14"
+.br
+.ti -1c
+.RI "#define \fBLCD_CURSOR_SHIFT_LEFT\fP   0x10"
+.br
+.ti -1c
+.RI "#define \fBLCD_DISPLAY_SHIFT_RIGHT\fP   0x1C"
+.br
+.ti -1c
+.RI "#define \fBLCD_DISPLAY_SHIFT_LEFT\fP   0x18"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBLCD_strobe\fP (char lbyte)"
+.br
+.ti -1c
+.RI "void \fBLCD_wbyte\fP (char lbyte, char act)"
+.br
+.ti -1c
+.RI "void \fBLCD_init\fP (void)"
+.br
+.ti -1c
+.RI "void \fBLCD_printf\fP (const char *text)"
+.br
+.ti -1c
+.RI "void \fBLCD_printb\fP (char *lbuff)"
+.br
+.ti -1c
+.RI "void \fBLCD_printn\fP (long lnum, char cnum, char dp, char x, char y)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CMD   0x10"
+
+.SS "#define DATA   0x50"
+
+.SS "#define DIN   1"
+
+.SS "#define DOUT   0"
+
+.SS "#define I2C_LCD_ADDR   0b01000000"
+
+.SS "#define I2C_LCD_BL   7"
+
+.SS "#define I2C_LCD_D4   0"
+
+.SS "#define I2C_LCD_D5   1"
+
+.SS "#define I2C_LCD_D6   2"
+
+.SS "#define I2C_LCD_D7   3"
+
+.SS "#define I2C_LCD_EN   4"
+
+.SS "#define I2C_LCD_RS   6"
+
+.SS "#define I2C_LCD_RW   5"
+
+.SS "#define LCD_CHARS   16"
+
+.SS "#define LCD_CLEAR   0x01"
+
+.SS "#define LCD_cmd(cbyte)   (\fBLCD_wbyte\fP((cbyte),(\fBCMD\fP)))"
+
+.SS "#define LCD_CUR_BLINK   0x0F"
+
+.SS "#define LCD_CUR_OFF   0x0C"
+
+.SS "#define LCD_CUR_ON   0x0E"
+
+.SS "#define LCD_CURSOR_SHIFT_LEFT   0x10"
+
+.SS "#define LCD_CURSOR_SHIFT_RIGHT   0x14"
+
+.SS "#define LCD_data(cbyte)   (\fBLCD_wbyte\fP((cbyte),(\fBDATA\fP)))"
+
+.SS "#define LCD_DISP_OFF   0x08"
+
+.SS "#define LCD_DISP_ON   0x0C"
+
+.SS "#define LCD_DISPLAY_SHIFT_LEFT   0x18"
+
+.SS "#define LCD_DISPLAY_SHIFT_RIGHT   0x1C"
+
+.SS "#define LCD_EDELAY   10"
+
+.SS "#define LCD_HOME   0x02"
+
+.SS "#define LCD_LINE1   0x80"
+
+.SS "#define LCD_LINE2   0xC0"
+
+.SS "#define LCD_LINES   2"
+
+.SS "#define LCD_SET_DD_RAM   0x80"
+
+.SS "#define SIZE   16"
+
+.SH "Function Documentation"
+.PP 
+.SS "void LCD_init (void)"
+
+.SS "void LCD_printb (char *lbuff)"
+
+.SS "void LCD_printf (const char *text)"
+
+.SS "void LCD_printn (longlnum, charcnum, chardp, charx, chary)"
+
+.SS "void LCD_strobe (charlbyte)"
+
+.SS "void LCD_wbyte (charlbyte, charact)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for I2C LCD from the source code\&.
