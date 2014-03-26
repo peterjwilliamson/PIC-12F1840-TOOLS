@@ -1,4 +1,5 @@
 PIC-12F1840-TOOLS
 =================
 
-Tools to use with PIC 12F1840 Microcontroller
+This repo is currently being used to practice setting up and using git with github.
+Later it will contain the PIC-12f1840 tools.
