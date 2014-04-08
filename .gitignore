@@ -1,11 +1,10 @@
-
 # don't want thses files
 *.pdf
 *.bak
 *.obj
 *.brws
 *.__c
-makefile.*
+#makefile.*
 *.asm
 *.casm
 *.cof
