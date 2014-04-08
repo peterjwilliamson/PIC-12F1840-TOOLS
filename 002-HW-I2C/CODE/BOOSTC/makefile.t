@@ -2,9 +2,9 @@
 
 #--- If neccessary Change these for each program -------------------------------
 
-EXENAME=fb-main-29.exe    # Executable name
+TARGETNAME=wombat    # Name of targets
 
-EXEDIR=    # Where to put executables
+TARGETDIR=            # Where to put targets
 
 MAINBAS=fb-main-29    # name of main bas file. DO NOT include .bas extension
 
@@ -14,9 +14,9 @@ EXEFILE=$(EXEDIR)$(EXENAME)
 FBC=fbc    # the freebasic compiler. Exe must be in the path
 RM=rm      # executable to delete files. Exe must be in the path
 
-INCS=$(wildcard INC/*.bi)
-SRCS=$(wildcard SRC/*.bas)
-OBJS=$(patsubst SRC/%.bas,OBJ/%.o,$(SRCS))
+INCS=$(wildcard INC/*.h)
+SRCS=$(wildcard SRC/*.cpp)
+OBJS=$(patsubst SRC/%.cpp,OBJ/%.o,$(SRCS))
 
 #FBFLAGS=-g -exx
 FBFLAGS=-exx -p LIB
