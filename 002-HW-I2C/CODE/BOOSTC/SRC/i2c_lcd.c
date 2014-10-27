@@ -12,8 +12,11 @@ void i2c_lcd_strobe(char lbyte) // strobe the enable pin hi -> lo
 	i2c_write_byte(I2C_LCD_ADDR,lbyte);
 	delay_10us(I2C_LCD_EDELAY);
 }
+ 
 
 void i2c_lcd_wbyte(char lbyte,char act)
+
+
 {
 char ltemp;
 

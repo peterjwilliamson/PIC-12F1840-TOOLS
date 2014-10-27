@@ -9,7 +9,11 @@
 
 void interrupt(void)
 {
+char z = 0;
+
+	z++;
 	asm nop;
+	
 }
 
 void main(void)
